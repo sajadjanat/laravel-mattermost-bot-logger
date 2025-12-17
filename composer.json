@@ -1,0 +1,31 @@
+{
+  "name": "sajadjanat/laravel-mattermost-bot-logger",
+  "description": "A custom Laravel logging channel to send logs and exceptions to Mattermost using Bot Token (API v4)",
+  "keywords": ["laravel", "logging", "mattermost", "bot", "exceptions"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sajad Janat",
+      "email": "sadjadjanat@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.1|^8.2|^8.3",
+    "illuminate/support": "^9.0|^10.0|^11.0",
+    "illuminate/log": "^9.0|^10.0|^11.0",
+    "guzzlehttp/guzzle": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sajadabasi\\MattermostBotLogger\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [],
+      "aliases": {}
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
