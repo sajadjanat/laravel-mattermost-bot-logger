@@ -31,8 +31,9 @@ This package provides structured, readable log messages with severity indicators
 
 ## Installation
 
+```php
 composer require sajadjanat/laravel-mattermost-bot-logger
-
+```
 The package uses Composer autoloading and works out-of-the-box with both Laravel and Lumen.
 
 ---
@@ -102,7 +103,7 @@ $app->configure('logging');
 
 $app->configureMonologUsing(function (Monolog\Logger $monolog) {
     $monolog->pushHandler(
-        new \Sajadabasi\MattermostBotLogger\MattermostBotHandler(
+        new \Sajadjanat\MattermostBotLogger\MattermostBotHandler(
             level: \Monolog\Logger::toMonologLevel(
                 env('MATTERMOST_LOG_LEVEL', 'error')
             )
@@ -122,7 +123,7 @@ If you prefer not to publish a config file, use the following channel definition
 ```php
 'mattermost' => [
     'driver' => 'monolog',
-    'handler' => \Sajadabasi\MattermostBotLogger\MattermostBotHandler::class,
+    'handler' => \Sajadjanat\MattermostBotLogger\MattermostBotHandler::class,
     'level' => env('MATTERMOST_LOG_LEVEL', 'error'),
     'base_url' => env('MATTERMOST_BASE_URL'),
     'token' => env('MATTERMOST_BOT_TOKEN'),
